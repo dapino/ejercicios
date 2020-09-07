@@ -1,10 +1,9 @@
-//Sincronía (Paso a paso de un listado de cosas que tienen que pasar)
+// Sincronía (Paso a paso de un listado de cosas que tienen que pasar)
 
-//Asincronía (Muchas cosas funcionando al mismo tiempo)
+// Asincronía (Muchas cosas funcionando al mismo tiempo)
 
-//Promesa (Una promesa resuelve algo asincrono, debe tener callbacks, 
-//cuando hacen más de un callback CANCELEN! ) 
-
+// Promesa (Una promesa resuelve algo asincrono, debe tener callbacks, 
+// cuando hacen más de un callback CANCELEN! ) 
 
 
 /*------ ¿Cómo hacer un huevito con yema blandita? -------*/
@@ -52,9 +51,9 @@ const huevitoConCallbacks = (huevito = true, yemita = false) => {
 
 huevitoConCallbacks(huevito, yemita);
 
-const esperar = (time = 1000) => {
-	return new Promise(resolve => setTimeout(resolve, time))
-}
+
+// Aquí Creamos promesas,  pero no las vamos a invocar 
+// De aquí lo importante es el new Promise que tiene 2 parametros el resolve y el reject
 
 const siHayHuevitos = (huevito = true, tiempo = 1000) => {
 	return new Promise ((resolve, reject) => {
@@ -67,21 +66,6 @@ const siHayHuevitos = (huevito = true, tiempo = 1000) => {
 	})
 }
 
-
-const pruebaPromesa = async (API_URL) => {
-	try {
-		const resultado = await fetch('https://pokeapi.co/api/v2/pokemon/1')
-		const resultado2 = await fetch('https://pokeapi.co/api/v2/pokemon/1')
-		const resultado3 = await fetch('https://pokeapi.co/api/v2/pokemon/1')
-		return resultado.json()
-	} catch (error){
-		if()
-	}
-}
-
-pruebaPromesa().then(data => console.log(`pruebaPromesa: ${data}`)).catch(error => console.log(`pruebaPromesa: ${error}`))
-
-
 const calentarSarten = (tiempo = 1000) => {
 	return new Promise ((resolve)=> {
 		setTimeout(() => {
@@ -90,6 +74,17 @@ const calentarSarten = (tiempo = 1000) => {
 	})
 }
 
+const agregarSalecita = (tiempo = 500) => {
+	return new Promise ((resolve)=> {
+		setTimeout(() => {
+			resolve("Quedó tranqui, ni muy salado ni sin sal :)")
+		}, tiempo)
+	})
+}
+
+const esperar = (time = 1000) => {
+	return new Promise(resolve => setTimeout(resolve, time))
+}
 async function romperHuevito(esperar){
 	try {
 		await esperar();
@@ -97,13 +92,6 @@ async function romperHuevito(esperar){
 	} catch(error) {
 		return error;
 	}
-}
-
-
-//Aqui sin try and catch BY FRENTE UNIDO DE ALEJANDRAS - FUA
-async function romperHuevitosinTryCatch(esperar){
-	const funcionwaiteada = await esperar();
-	return funcionwaiteada; //Sí en algún momento hay error, la función no va a ejecutarse y va a trabar todo, por eso se usa el catch
 }
 
 const yemitaHuevito = (yemita= true, tiempo = 1000) => {
@@ -122,14 +110,19 @@ const cocinandoHuevito = () =>{
 	siHayHuevitos()
 	calentarSarten()
 	romperHuevito(esperar)
+	agregarSalecita()
+}
+
+//Aqui sin try and catch BY FRENTE UNIDO DE ALEJANDRAS - FUA
+async function romperHuevitosinTryCatch(esperar){
+	const funcionwaiteada = await esperar();
+	return funcionwaiteada; //Sí en algún momento hay error, la función no va a ejecutarse y va a trabar todo, por eso se usa el catch
 }
 
 
-const agregarSalecita = () = {}
+/* const taparSarten = () = {}
 
-const taparSarten = () = {}
-
-const esperarTresMinutos = () = {}
+const esperarTresMinutos = () = {} */
 
 // siHayHuevitos(false, 5000)
 // 	.then((respuesta) => {
@@ -145,3 +138,5 @@ const esperarTresMinutos = () = {}
 // })
 
 // async 
+
+
