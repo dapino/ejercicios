@@ -24,6 +24,10 @@
   },
   "homepage": "https://github.com/Malejandraib/ejercicios#readme",
   "devDependencies": {
+    "@babel/core": "^7.11.6",
+    "@babel/plugin-transform-modules-commonjs": "^7.2.0",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^24.8.0",
     "jest": "^26.4.2"
   }
 }

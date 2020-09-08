@@ -2,7 +2,10 @@ export const myFunction = (num) => {
     return num * 2
 };
 
+const caracteristica = [];
+
 export const obtenerAlgo = (aquiVaElArray, caracteristica) => {
+    //const arrCaracteristica = [];
     //Esto es MDN el ejemplo de sintáxis const map1 = array1.map(x => x * 2);
     const arrCaracteristica = aquiVaElArray.map((persona) => {
         return persona[caracteristica];
@@ -11,6 +14,7 @@ export const obtenerAlgo = (aquiVaElArray, caracteristica) => {
 }
 
 export const obtenerNombres = (aquiVaElArray) => {
+
     const arrName = aquiVaElArray.map((persona) => {
         return persona.name
     })
@@ -19,6 +23,7 @@ export const obtenerNombres = (aquiVaElArray) => {
 }
 
 export const obtenerEdad = (aquiVaElArray) => {
+    //const arrAge = []
     const arrAge = aquiVaElArray.map((persona) => {
         return persona.age
     })
