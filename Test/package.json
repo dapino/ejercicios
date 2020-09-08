@@ -1,0 +1,29 @@
+{
+  "name": "testing",
+  "version": "1.0.0",
+  "description": "unit test, async test, mocks",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Malejandraib/ejercicios.git"
+  },
+  "keywords": [
+    "unit",
+    "test",
+    "async",
+    "test",
+    "mocks"
+  ],
+  "author": "BOG001",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Malejandraib/ejercicios/issues"
+  },
+  "homepage": "https://github.com/Malejandraib/ejercicios#readme",
+  "devDependencies": {
+    "jest": "^26.4.2"
+  }
+}
