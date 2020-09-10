@@ -1,0 +1,21 @@
+{
+  "name": "ejercicios",
+  "version": "1.0.0",
+  "description": "👌 Puedes revisar las recomendaciones para fortalecer tu aprendizaje [AQUÍ](recommendations.md).",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dapino/ejercicios.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dapino/ejercicios/issues"
+  },
+  "homepage": "https://github.com/dapino/ejercicios#readme"
+}
